@@ -1,4 +1,7 @@
 <?php
+    require_once('includes/db.php');
+
+
         $servername = "localhost";
         $username = "sqluser";
         $password = "sqlpass";
@@ -58,3 +61,4 @@
             
         <input type="submit" />
 </html>
+<?php require_once('includes/footer.php'); ?>
