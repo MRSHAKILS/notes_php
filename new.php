@@ -9,7 +9,23 @@
         die("Connection failed" . mysqli_connect_error());
     }
 
-        echo "Connection succesful";
+        // echo "Connection succesful"; shows that the connection is successful
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            $title = $_POST['title'];
+            $content = $_POST['content'];
+            $important = $_POST['important'];
+
+            
+            $sql = "INSERT INTO notes (title, content, important) VALUES ('";
+            $sql .= $title . "', '" . $content . "', '" . $important . "')";
+            if(mysqli_query($conn, $sql)){
+                echo 'Success';
+            }
+            
+        }
+
+        
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +42,7 @@
             <div class="backLink"><a class="nav-link" href="index.php"> Home</a></div>
             <div class="head">New Note</div>
     </div>
-    <form action="edit.php" method="post">     
+    <form action="new.php" method="post">     
 
             <span class="label">Title</span>
             <input type="text" name="title" />
