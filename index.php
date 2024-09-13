@@ -31,8 +31,13 @@
                             </div>                 
                         </div>
                     
-                         <div class="nt-content"><?php echo $note['content']; ?></div>
+                         <div class="nt-content"><?php if ($note['important']) {
+                            echo "<span class='imp'>IMPORTANT</span>";
+                        } ?><?php echo $note['content']; ?></div>
                     </div>
+                    <?php }
+                    mysqli_free_result($notes);
+                    ?>
         </div> 
     </body>
 </html>
