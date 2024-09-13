@@ -42,7 +42,7 @@
     </header>
 
     <div class="titleDiv">
-            <div class="backLink"><a class="nav-link" href="index.php"> Home</a></div>
+            <div class="backLink"><a class="nav-link" href="index.php">Home</a></div>
             <div class="head">New Note</div>
     </div>
     <form action="new.php" method="post">     

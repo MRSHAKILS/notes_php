@@ -1,9 +1,15 @@
-<?php require_once('includes/db.php');
+<?php 
+    require_once('includes/db.php');
     
-    if(){
-
+    if(!isset($_GET['id'])){
+        header('Location: index.php');
     }
-    $sql
+    $id = $_GET['id'];
     $sql = "DELETE FROM notes WHERE id ='" . $id . "' LIMIT 1"; 
-
-    ?>
+    if(mysqli_query($conn, $sql)){
+        header('Location: index.php');
+    }
+    else{
+        echo 'Error: ' . mysqli_error($conn);
+    }
+?>
