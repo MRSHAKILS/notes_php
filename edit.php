@@ -1,6 +1,21 @@
 <?php
     require_once('includes/db.php');
+    require_once('includes/functions.php');
 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $title = prep_input($_POST['title']);
+        $content = prep_input($_POST['content']);
+        $important = prep_input($_POST['important']);
+
+        $sql = "UPDATE notes SET title = '" . $title . "', content = '" . $content . "', important = '" . $important . "' WHERE id = '" . $id . "', LIMIT 1"; 
+        $result = mysqli_query($conn, $sql);
+
+        if ($result) {
+            header('Location: index.php');
+        } else {
+            echo 'Error: ' . mysqli_error($conn);
+        }
+    }
     if(!isset($_GET['id'])){
         header('Location: index.php');
     }
@@ -8,6 +23,7 @@
     $sql = "SELECT * FROM notes WHERE id = '" . $id . "' LIMIT 1";
     $result = mysqli_query($conn, $sql);
     $note = mysqli_fetch_assoc($result);
+    mysqli_free_result($result);
     
 ?>
 
@@ -28,15 +44,15 @@
     <form action="edit.php" method="post">     
 
             <span class="label">Title</span>
-            <input type="text" name="title" />
+            <input type="text" name="title" value= <? echo $note['title']; ?>/>
             
             <span class="label">Content</span>
-            <textarea name="content"> </textarea>
+            <textarea name="content"> <?php echo $note['content']; ?> </textarea>
 
             <div class="chkgroup">
                 <span class="label-in">Important</span>
                 <input type="hidden" name="important" value="0" />
-                <input type="checkbox" name="important" value="1" />
+                <input type="checkbox" name="important" value="1" <?php if ($note['important']) {echo "checked";} ?>/>
             </div>
             
         <input type="submit" />
