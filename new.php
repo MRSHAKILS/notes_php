@@ -15,6 +15,13 @@
 
     // echo "Connection succesful"; shows that the connection is successful
 
+    // function prep_input($data){
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return $data;   
+    // }
+
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $title = prep_data($_POST['title']);
             $content = prep_data($_POST['content']);

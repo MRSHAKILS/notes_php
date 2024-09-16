@@ -1,3 +1,14 @@
+<?php
+    require_once('includes/db.php');
+
+    if(!isset($_GET['id'])){
+        header('Location: index.php');
+    }
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM notes WHERE id = '" . $id . "' LIMIT 1";
+    $result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
