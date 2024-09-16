@@ -7,6 +7,8 @@
     $id = $_GET['id'];
     $sql = "SELECT * FROM notes WHERE id = '" . $id . "' LIMIT 1";
     $result = mysqli_query($conn, $sql);
+    $note = mysqli_fetch_assoc($result);
+    
 ?>
 
 <!DOCTYPE html>
