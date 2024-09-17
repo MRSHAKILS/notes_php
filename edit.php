@@ -24,7 +24,7 @@
     $result = mysqli_query($conn, $sql);
     $note = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
-    
+     
 ?>
 
 <!DOCTYPE html>
