@@ -5,9 +5,9 @@
 
 
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
-            $title = prep_data($_POST['title']);
-            $content = prep_data($_POST['content']);
-            $important = prep_data($_POST['important']);
+            $title = prep_input($_POST['title']);
+            $content = prep_input($_POST['content']);
+            $important = prep_input($_POST['important']);
 
             
             $sql = "INSERT INTO notes (title, content, important) VALUES ('";
