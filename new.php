@@ -3,24 +3,6 @@
     require_once('includes/functions.php');
 
 
-    //     $servername = "localhost";
-    //     $username = "sqluser";
-    //     $password = "sqlpass";
-    //     $dbname = "notes";
-    //     $conn = mysqli_connect($servername, $username, $password, $dbname);
-        
-    // if(!$conn){
-    //     die("Connection failed" . mysqli_connect_error());
-    // }
-
-    // echo "Connection succesful"; shows that the connection is successful
-
-    // function prep_input($data){
-    //     $data = trim($data);
-    //     $data = stripslashes($data);
-    //     $data = htmlspecialchars($data);
-    //     return $data;   
-    // }
 
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $title = prep_data($_POST['title']);
