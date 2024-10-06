@@ -1,183 +1,160 @@
-input[type=text] {
-    width: 50%;
-    height: 5%;
-    box-sizing: border-box;
-    border: 2px solid #cccccc;
-    border-radius: 5px;
+/* General Dark Mode Styling */
+body {
+    background-color: #202124; /* Dark background */
+    color: #E8EAED;            /* Light text */
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    
+    margin: 0;
+    padding: 0;
 }
 
-textarea {
-    width: 50%;
-    height: 150px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
+input[type=text], textarea {
+    width: 80%;
+    background-color: #303134; /* Dark background for input */
+    color: #E8EAED;            /* Light text */
+    border: 1px solid #5F6368;
     border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    background-color: #f8f8f8;
-    resize: none;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    
-  }
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
 
-  input[type=submit]{
-    width: 10%;
-    background-color: #4CAF50;
+input[type=text]:focus, textarea:focus {
+    border: 1px solid #8AB4F8; /* Highlight input when focused */
+    outline: none;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #8AB4F8; /* Light blue accent */
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 10px;
+    margin: 10px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-
-  }
-
-  input[type=submit]:hover {
-      background-color: #45a049;
-  }
-
-  input[type=checkbox]{
-      font-size: larger;
-      padding: 5px;
-      display:  inline-block;
-  }
-
-  form {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-  }
-
-  .label {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    display: block;
-    margin: 10px;
-    font-weight: bold;
-  }
-  .label-in {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    display: inline-block;
-    margin: 10px;
-  }
-
-  .chckgroup {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    display: block;
-    margin: 10px;
-  }
-
-  header {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: x-large;
-      font-weight: bolder;
-      font-style: italic;
-      text-align: center;
-      width: 100%;
-      height: 100px;
-      background-color: #CFC2BD;
-      box-sizing: border-box;
-      margin: 0px;
-      padding: 0px;
-      border: 0px;
-      line-height: 100px;
-  }
-
-.titleDiv {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    font-weight: bold;
-    height: 30px;
-    line-height: 30px;
-    background-color: #D5CECC;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.backLink {
-    box-sizing: border-box;
-    display: inline-block;
-    margin-right: 200px;
-    text-align: center;
+input[type=submit]:hover {
+    background-color: #6895E6; /* Darker blue on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
-.head {
-    display: inline-block;
-}
-
-.nav-link {
-    text-decoration: none;
-    text-align: center;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.nav-link:hover{
-    
-    background-color: #E9E3E1;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px;
-}
-
-.titleContainer {
-    border-radius: 5px 10px 0px 0px;
-    border: 2px solid #73AD21;
-    box-sizing: border-box;
-    background-color: #73AD21;
-    height: 50px;
-    padding-top: 5px;
-    padding-right: 2px;
-}
-
-.nt-title {
-    display: inline;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+input[type=checkbox] {
     font-size: large;
-    margin-left: 5px;
-    
-}
-
-.nt-links {
-    float: right;
-    margin-left: 40%;
-}
-
-.nt-link{
-    font-weight: bold;
-    font-size: small;
-    display: inline;
-    margin-left: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.note {
-    width: 40%;
+    padding: 5px;
     display: inline-block;
-    margin: 20px 20px 20px 20px;
-    
+}
+
+/* Form Styling */
+form {
+    background-color: #303134; /* Dark background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Card-like shadow */
+    width: 50%;
+    margin: auto;
+}
+
+/* Label Styling */
+.label, .label-in {
+    font-weight: bold;
+    margin: 10px;
+    color: #E8EAED;
+}
+
+header {
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    background-color: #303134;
+    color: #E8EAED;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Title and Backlink Styling */
+.titleDiv {
+    font-size: medium;
+    font-weight: bold;
+    background-color: #3C4043;
+    color: #E8EAED;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.backLink .nav-link {
+    color: #8AB4F8; /* Accent color for link */
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #5F6368;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Note Container for cards */
+.note-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Note Card Style */
+.note {
+    background-color: #3C4043; /* Dark card background */
+    color: #E8EAED;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Card shadow */
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    transition: box-shadow 0.3s ease;
+}
+
+.note:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Shadow on hover */
+}
+
+/* Note Content */
+.nt-title {
+    font-size: large;
+    font-weight: bold;
+    color: #8AB4F8;
 }
 
 .nt-content {
-    background-color: #C7ECB8;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 250px;
     font-style: italic;
-    padding: 10px;
+    color: #E8EAED;
 }
 
+/* Important Checkbox */
 .imp {
-    display: block;
-    color: red;
+    color: #F28B82; /* Red color for "important" */
     font-weight: bold;
+}
 
+/* Button Styling for Edit/Delete Links in Note */
+.nt-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.nt-link {
+    color: #8AB4F8;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.nt-link:hover {
+    text-decoration: underline;
 }
