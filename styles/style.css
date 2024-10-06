@@ -8,15 +8,14 @@ body {
 }
 
 input[type=text], textarea {
-    width: 80%;
-    background-color: #303134; /* Dark background for input */
-    color: #E8EAED;            /* Light text */
+    width: 100%;
+    padding: 10px;
+    background-color: #3C4043;
+    color: #E8EAED;
     border: 1px solid #5F6368;
     border-radius: 5px;
-    font-size: medium;
-    padding: 10px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease; /* Smooth transition */
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
 }
 
 input[type=text]:focus, textarea:focus {
@@ -25,21 +24,19 @@ input[type=text]:focus, textarea:focus {
 }
 
 input[type=submit] {
-    width: 20%;
-    background-color: #8AB4F8; /* Light blue accent */
-    color: white;
-    padding: 10px;
-    margin: 10px 0;
+    width: 30%;
+    background-color: #8AB4F8;
+    color: #202124;
     border: none;
-    border-radius: 4px;
+    padding: 12px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: medium;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 input[type=submit]:hover {
-    background-color: #6895E6; /* Darker blue on hover */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    background-color: #4F8DF8; /* Slight color change on hover */
 }
 
 input[type=checkbox] {
@@ -48,21 +45,29 @@ input[type=checkbox] {
     display: inline-block;
 }
 
+input[type=checkbox] {
+    transform: scale(1.5); /* Larger checkbox for better UX */
+    margin-left: 10px;
+}
+
 /* Form Styling */
 form {
-    background-color: #303134; /* Dark background */
-    border-radius: 8px;
+    background-color: #202124;
+    color: #E8EAED;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Card-like shadow */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     width: 50%;
-    margin: auto;
+    margin: 20px auto;
 }
 
 /* Label Styling */
 .label, .label-in {
+    font-family: Arial, sans-serif;
     font-weight: bold;
-    margin: 10px;
     color: #E8EAED;
+    margin-top: 10px;
+    display: block;
 }
 
 header {
