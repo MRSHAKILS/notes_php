@@ -6,16 +6,25 @@
         $title = prep_input($_POST['title']);
         $content = prep_input($_POST['content']);
         $important = prep_input($_POST['important']);
+        $id = prep_input($_POST['id']);
 
-        $sql = "UPDATE notes SET title = '" . $title . "', content = '" . $content . "', important = '" . $important . "' WHERE id = '" . $id . "', LIMIT 1"; 
-        $result = mysqli_query($conn, $sql);
-
-        if ($result) {
+        $sql = "UPDATE notes SET title = '" . $title . "', content = '" . $content . "', important = '" . $important . "' WHERE id = '" . $note['id'] . "', LIMIT 1"; 
+        
+        if ( mysqli_query($conn, $sql)){
             header('Location: index.php');
-        } else {
-            echo 'Error: ' . mysqli_error($conn);
         }
+        // } else {
+        //     echo 'Error: ' . mysqli_error($conn);
+        // }
+
+
+        // if ($result) {
+        //     header('Location: index.php');
+        // } else {
+        //     echo 'Error: ' . mysqli_error($conn);
+        // }
     }
+
     if(!isset($_GET['id'])){
         header('Location: index.php');
     }
@@ -41,7 +50,8 @@
             <div class="backLink"><a class="nav-link" href="index.php"> Home</a></div>
             <div class="head">New Note</div>
     </div>
-    <form action="edit.php" method="post">     
+    <form action="edit.php" method="post">  
+        <input type="hidden" name="id" value=<?php echo $note['id']; ?>   
 
             <span class="label">Title</span>
             <input type="text" name="title" value= <? echo $note['title']; ?>/>
