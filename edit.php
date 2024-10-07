@@ -6,7 +6,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $title = prep_input($_POST['title']);
         $content = prep_input($_POST['content']);
-        $important = isset($_POST['important']) ? 1 : 0;  // Correct handling of the checkbox
+        $important = prep_input($_POST['important']);  // Correct handling of the checkbox
         $id = prep_input($_POST['id']);
 
         $sql = "UPDATE notes SET title = '$title', content = '$content', important = '$important' WHERE id = '$id' LIMIT 1";
