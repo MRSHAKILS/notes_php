@@ -46,7 +46,7 @@ input[type=checkbox] {
 }
 
 input[type=checkbox] {
-    transform: scale(1.5); /* Larger checkbox for better UX */
+    transform: scale(1.5); 
     margin-left: 10px;
 }
 
